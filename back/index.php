@@ -1,10 +1,27 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-   
-  </body>
-</html>
+
+  <?php
+    header("Access-Control-Allow-Origin: *");
+
+$todos = [
+    [
+        'name' => 'Imparare HTML',
+        'done' => true,
+    ],
+    [
+        'name' => 'Imparare CSS',
+        'done' => true,
+    ],
+    [
+        'name' => 'Imparare JS',
+        'done' => true,
+    ],
+    [
+        'name' => 'Imparare php',
+        'done' => false,
+    ],
+];
+
+    header('Content-Type: application/json');
+    echo json_encode($todos);
+?>
+
